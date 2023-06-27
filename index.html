@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Price Prediction</title>
+</head>
+<body>
+    <h1>Property Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="area">Area:</label>
+        <input type="number" id="area" name="area" required><br>
+
+        <label for="rooms">Number of Rooms:</label>
+        <input type="number" id="rooms" name="rooms" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street" required><br>
+
+        <label for="number_in_street">Number in street:</label>
+        <input type="number" id="number_in_street" name="number_in_street" required><br>
+
+        <label for="city_area">City Area:</label>
+        <input type="text" id="city_area" name="city_area" required><br>
+        
+        <label for="type">Type:</label>
+        <select id="type" name="type" required>
+            <option value="דירה">דירה</option>
+            <option value="דירת גן">דירת גן</option>
+            <option value="דירת גג">דירת גג</option>
+            <option value="בניין">בניין</option>
+            <option value="קוטג'">קוטג'</option>
+            <option value="בית פרטי">בית פרטי</option>
+            <option value="דופלקס">דופלקס</option>
+            <option value="דירת נופש">דירת נופש</option>
+            <option value="פנטהאוז">פנטהאוז</option>
+            <option value="קוטג' טורי">קוטג' טורי</option>
+            <option value="מיני פנטהאוז">מיני פנטהאוז</option>
+            <option value="מגרש">מגרש</option>
+            <option value="דו משפחתי">דו משפחתי</option>
+            <option value="טריפלקס">טריפלקס</option>
+            <option value="אחר">אחר</option>
+        </select><br>
+
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+            <option value="לא צויין">לא צויין</option>
+            <option value="חדש">חדש</option>
+            <option value="משופץ">משופץ</option>
+            <option value="שמור">שמור</option>
+            <option value="ישן'">ישן'</option>
+            <option value="דורש שיפוץ">דורש שיפוץ</option>
+        </select><br>
+
+        <label for="has_elevator">Has Elevator:</label>
+        <input type="checkbox" id="has_elevator" name="has_elevator"><br>
+
+        <label for="has_parking">Has Parking:</label>
+        <input type="checkbox" id="has_parking" name="has_parking"><br>
+
+        <label for="has_balcony">Has Balcony:</label>
+        <input type="checkbox" id="has_balcony" name="has_balcony"><br>
+
+        <label for="has_garden">Has Garden:</label>
+        <input type="checkbox" id="has_garden" name="has_garden"><br>
+
+        <label for="floor">Floor:</label>
+        <input type="number" id="floor" name="floor" required><br>
+
+        <label for="total_floors">Total Floors:</label>
+        <input type="number" id="total_floors" name="total_floors" required><br>
+
+        <label for="has_air_conditioning">Has Air Conditioning:</label>
+        <input type="checkbox" id="has_air_conditioning" name="has_air_conditioning"><br>
+
+        <label for="has_storage">Has Storage:</label>
+        <input type="checkbox" id="has_storage" name="has_storage"><br>
+
+        <label for="has_security_bars">Has Security Bars:</label>
+        <input type="checkbox" id="has_security_bars" name="has_security_bars"><br>
+
+        <label for="has_mamad">Has Mamad:</label>
+        <input type="checkbox" id="has_mamad" name="has_mamad"><br>
+
+        <label for="has_Bars">Has Bars:</label>
+        <input type="checkbox" id="has_Bars" name="has_Bars"><br>
+
+        <label for="handicap_friendly">Handicap Friendly:</label>
+        <input type="checkbox" id="handicap_friendly" name="handicap_friendly"><br>
+
+        <label for="furniture">Furniture:</label>
+        <select id="furniture" name="furniture" required>
+            <option value="אין">אין</option>
+            <option value="חלקי">חלקי</option>
+            <option value="מלא">מלא</option>
+        </select><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h1>Property Price Prediction Result</h1>
+    <p>Predicted Price: {{ prediction }}</p>
+</body>
+</html>
